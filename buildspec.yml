@@ -1,0 +1,32 @@
+version: 0.1 
+ 
+phases:
+  install:
+    commands:
+      - echo Insatlling NPM Packages and wget Enviorment File
+      - npm install --save-dev webpack -g
+      - npm install --save-dev webpack-cli -g
+      - npm install --save-dev react react-dom -g
+      - npm install
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - webpack
+  post_build:
+    commands:
+      - echo `ls -alt ./public/`
+      - aws s3 cp ./public/index.html s3://jjouhiu-application
+      - aws s3 cp ./public/bundle.js s3://jjouhiu-application
+artifacts:
+  files:
+        - public/bundle.js
+  discard-paths: yes
+  secondary-artifacts:
+    artifact1:
+      files:
+        - public/index.html
+      discard-paths: yes
+

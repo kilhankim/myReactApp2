@@ -1,0 +1,11 @@
+{
+  "rds_host" : "kh-database.cpz602x20cvt.ap-northeast-2.rds.amazonaws.com",
+  "rds_user" : "admin",
+  "rds_password" : "kkh4790!",
+  "rds_database" : "kh",
+  "UserPoolId"   : "ap-northeast-2_ywvJEnETc",
+  "ClientId"     : "58f12rqlkhdao08gnbih7f6kdo",
+  "region"       : "ap-northreast-2",
+  "IdentityPoolId": "ap-northeast-2:0f483cf4-89dc-43c8-b851-3ac486938253",
+  "Logins"       : "cognito-idp.ap-northeast-2.amazonaws.com/ap-northeast-2_ywvJEnETc"
+}
